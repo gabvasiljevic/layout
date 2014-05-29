@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="styles/chat.css">
 	<link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body ng-app="istim">
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -24,7 +24,7 @@
 	<div class="row">
 		<div class="col-xs-6 col-xs-offset-3">
 			<div class="jumbotron signup-page-form-hero">
-				<form class="form-horizontal" method="post" action="index.html">
+				<div class="form-horizontal">
 					<fieldset class="login-popup">
 						<div class="col-xs-12 no-padding-left no-padding-right">
 							<legend>
@@ -35,24 +35,24 @@
 								</div>
 							</legend>
 						</div>
-						<div class="form-group">
+						<form class="form-group" ng-controller="LoginController">
 							<div class="col-xs-12">
 								<div class="form-group">
 									<div class="col-xs-12">
-										<input class="form-control" type="email" for="email" placeholder="email" required>
-										<input class="form-control" type="password" for="password" placeholder="Senha" required>
+										<input class="form-control" type="email" placeholder="email" ng-model="user.email" required>
+										<input class="form-control" type="password" for="password" placeholder="Senha" ng-model="user.password" required>
 
-										<span class="pull-left"><a href="forgot_password.html">Esqueceu a Senha</a></span><br>
-										<span class="pull-left"><a href="signup.html">Registrar-se</a></span>
+										<span class="pull-left"><a href="#/signup">Registrar-se</a></span>
 									</div>
 								</div>
 								<div class="form-group col-xs-6 pull-right">
-									<input type="submit" class="btn btn-success col-xs-12" value="Entrar    ">
+									<button class="btn btn-success col-xs-12" value="Entrar" ng-click="auth(user)">Entrar</button>
+									<!-- <input type="submit" class="btn btn-success col-xs-12" value="Entrar" ng-click="auth(user)"> -->
 								</div>
 							</div>
-						</div>
+						</form>
 					</fieldset>
-				</form>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -76,7 +76,7 @@
 	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
 	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
 	<script src="scripts/start.js"></script>
-	<script src="scripts/main.js"></script>
+
     <script src="scripts/chat.js"></script>
 </body>
 </html>

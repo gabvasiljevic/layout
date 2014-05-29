@@ -15,6 +15,7 @@ if (document.getElementById("canvas_most"))
 	var myLine = new Chart(document.getElementById("canvas_most").getContext("2d")).Bar(barChartData);
 
 $('#items-table .item').each(function() {
+	console.log('oasdadsk');
 	var name = $(this).find('img').data('name');
 	var description = $(this).find('img').data('description');
 	var value = $(this).find('img').data('value');

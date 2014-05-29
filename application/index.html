@@ -19,8 +19,17 @@
 <!-- to refactor-->
 <script src="bower_components/modernizr/modernizr.js"></script>
 <body ng-app="istim" ng-controller="IstimController">
+    <div ng-switch="session.authenticated">
+        <div ng-switch-when="true">
+            <!-- code to render a large video block-->
+            <partial data-template="navbar_authenticated"></partial>
+        </div>
+        <div ng-switch-default>
+            <!-- code to render the regular video block -->
+            <partial data-template="navbar_public"></partial>
+        </div>
+    </div>
 
-    <partial data-template="navbar_public"></partial>
     <partial data-template="sign_up_modal"></partial>
     <partial data-template="chat"></partial>
     <partial data-template="friend_list"></partial>
@@ -64,6 +73,7 @@
     <script src="bower_components/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
     <script src="scripts/start.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/chat.js"></script>
@@ -72,6 +82,14 @@
     <script src="scripts/IstimController.js"></script>
     <script src="scripts/GamesController.js"></script>
     <script src="scripts/GameShowController.js"></script>
+    <script src="scripts/LoginController.js"></script>
+    <script src="scripts/SignupController.js"></script>
+    <script src="scripts/LogoutController.js"></script>
+    <script src="scripts/ProfileController.js"></script>
+    <script src="scripts/ItemsController.js"></script>
+    <script src="scripts/ItemsSellController.js"></script>
+    <script src="scripts/DashboardController.js"></script>
+	<script src="scripts/CoinController.js"></script>
 
 </body>
 </html>

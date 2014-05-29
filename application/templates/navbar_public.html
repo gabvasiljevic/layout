@@ -21,19 +21,15 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrar <b class="caret"></b></a>
         <ul class="dropdown-menu login-dropdown">
           <li>
-            <form class="form-horizontal">
               <fieldset class="login-popup">
-                <legend>Login</legend>
-                <div class="form-group">
+                <legend style="text-align:center;"> Login </legend>
+                <form class="form-group" ng-controller="LoginController">
                   <div class="col-xs-12">
-                    <input class="form-control" type="email" for="email" placeholder="email">
-                    <input class="form-control" type="password" for="password" placeholder="senha">
-                    <input type="submit" class="btn btn-success col-xs-12" value="Entrar">
-
-                    <!-- <span class="pull-right">Don't have an account?</span> -->
+                    <input class="form-control" type="email" placeholder="email" ng-model="user.email" required>
+					<input class="form-control" type="password" for="password" placeholder="Senha" ng-model="user.password" required>
+					<button class="btn btn-success col-xs-12" value="Entrar" ng-click="auth(user)">Entrar</button>
                     <button data-toggle="modal" data-target="#signup-modal" id="signup-modal-button" type="button" class="btn btn-default col-xs-4 pull-right"> Registrar-se </button>
                   </div>
-                </div>
               </fieldset>
             </form>
           </li>

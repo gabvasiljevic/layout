@@ -1,17 +1,19 @@
 {
-	"name": "istim-layout",
-	"version": "1.0.0",
-	"dependencies": {
-		"bootswatch-scss": "3.*",
-		"font-awesome": "4.0.*",
-		"modernizr": "2.7.*",
-		"jquery": "1.11.*",
-		"chartjs_lucasfercunha": "1.0.0",
-		"angular": "*",
-		"angular-route": "*",
-		"owlcarousel": "*"
-	},
-	"devDependencies": {
-		"intuos.js": "0.2.*"
-	}
+  "name": "istim-layout",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootswatch-scss": "3.*",
+    "font-awesome": "4.0.*",
+    "modernizr": "2.7.*",
+    "jquery": "1.11.*",
+    "chartjs_lucasfercunha": "1.0.0",
+    "angular": "*",
+    "angular-route": "*",
+    "angular-cookies": "*",
+    "owlcarousel": "*"
+  },
+  "devDependencies": {
+    "intuos.js": "0.2.*",
+    "angular-cookies": "*"
+  }
 }

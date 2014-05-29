@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="styles/chat.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body ng-app="istim">
 
     <div class="col-sm-3">
         <partial data-template="sidebar"></partial>
     </div>
-
-    <div class="col-sm-5">
+	<div ng-controller="CoinController">
+    <div class="col-sm-5" >
         <div class="title-add-coins">
             <h1>Adicionar Coins à sua Conta Istim</h1>
             <p class = "opa">Fundos na sua Carteira Istim podem ser usados na compra de qualquer jogo no Istim ou em transações com outros jogadores.</p>
@@ -31,7 +31,7 @@
                 <div class="add-coins-list-title">
                     Adicionar <span class="color-yellow"><i class="fa fa-bitcoin"></i> 1.000</span> <span class="color-green">(R$ 10,00)</span>
                     <div class="add-coins-button">
-                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal" ng-click="setFormDataCash(1000)">
                             ADICIONAR
                         </button>
                     </div>  
@@ -45,7 +45,7 @@
                 <div class="add-coins-list-title">
                     Adicionar <span class="color-yellow"><i class="fa fa-bitcoin"></i> 2.000</span> <span class="color-green">(R$ 20,00)</span>
                     <div class="add-coins-button">
-                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal" ng-click="setFormDataCash(2000)">
                             ADICIONAR
                         </button>
                     </div>
@@ -57,7 +57,7 @@
                 <div class="add-coins-list-title">
                     Adicionar <span class="color-yellow"><i class="fa fa-bitcoin"></i> 5.000</span> <span class="color-green">(R$ 50,00)</span>
                     <div class="add-coins-button">
-                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal" ng-click="setFormDataCash(5000)">
                             ADICIONAR
                         </button>
                     </div>  
@@ -69,7 +69,7 @@
                 <div class="add-coins-list-title">
                     Adicionar <span class="color-yellow"><i class="fa fa-bitcoin"></i> 10.000</span> <span class="color-green">(R$ 100,00)</span>
                     <div class="add-coins-button">
-                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal" ng-click="setFormDataCash(10000)">
                             ADICIONAR
                         </button>
                     </div>  
@@ -81,7 +81,7 @@
                 <div class="add-coins-list-title">
                     Adicionar <span class="color-yellow"><i class="fa fa-bitcoin"></i> 20.000</span> <span class="color-green">(R$ 200,00)</span>
                     <div class="add-coins-button">
-                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal" ng-click="setFormDataCash(20000)">
                             ADICIONAR
                         </button>
                     </div>  
@@ -128,9 +128,9 @@
                                 <legend>Informações de Cobrança</legend>
 
                                 <div class="form-group">
-                                    <label class="col-lg-2 control-label">Nome do Solicitante:</label>
+                                    <label class="col-lg-2 control-label">Usuário do Solicitante:</label>
                                     <div class="col-lg-3">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" ng-model="formData.userId">
                                     </div>
                                     <label for="numero" class="col-lg-3 control-label">Telefone:</label>
                                     <div class="col-lg-3">
@@ -155,7 +155,7 @@
                                 <div class="form-group">
                                     <div class="col-lg-10 col-lg-offset-8">
                                         <button class="btn btn-default">Cancelar</button>
-                                        <button type="submit" class="btn btn-success">Enviar</button>
+                                        <button type="submit" class="btn btn-success" ng-click="creditCoin()">Enviar</button>
                                     </div>
                                 </div>
                             </fieldset>
@@ -164,6 +164,8 @@
                 </div>
             </div>
         </div>
+			</div>
+</div>
 
         <!-- dev tools -->
         <script src="bower_components/intuos.js/intuos.js"></script>

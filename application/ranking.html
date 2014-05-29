@@ -16,79 +16,77 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+<!-- sidebar -->
+    <div class="col-md-3">
+        <partial data-template="sidebar"></partial>
+    </div>
 
-    <div class="container-fluid">
+    <!-- content -->
+    <div class="col-xs-9">
         <div class="row">
-            <!-- sidebar -->
-            <div class="col-md-3">
-                <partial data-template="sidebar"></partial>
-            </div>
-           
-        <!-- content -->
-        <div class="col-md-9">
-            <divclass="col-xs-3"</div>
-            <div class="col-xs-9">
-            <div class="panel panel-default">
-            <div class="panel-heading">
-       <h3 class="panel-title">Colocações</h3>
-       </div>
-        			<table class="table table-striped table-hover ">
-        				<thead>
-        					<tr>
-        						<th>#</th>
-        						<th>Jogador</th>
-        						<th>Pontua&ccedil;&atilde;o</th>
-        						<th>Status</th>
-        					</tr>
-        				</thead>
-        				<tbody>
-        					<tr>
-        						<td>1</td>
-        						<td>ShadowKnight</td>
-        						<td>120.980.050</td>
-        						<td><span class="fa icon fa-user color-green"></span>Online</td>
-        					</tr>
-        					<tr>
-        						<td>2</td>
-        						<td>WarriorMarge</td>
-        						<td>80.750.120</td>
-        						<td><span class="fa icon fa-user"></span>Offline</td>
-        					</tr>
-        					<tr>
-        						<td>3</td>
-        						<td>CycloidDolph</td>
-        						<td>72.900.550</td>
-        						<td><span class="fa icon fa-user"></span>Offline</td>
-        					</tr>
-        					<tr>
-        						<td>4</td>
-        						<td>TurkeySkinner</td>
-        						<td>69.815.210</td>
-        						<td><span class="fa icon fa-user color-green"></span>Online</td>
-        					</tr>
-        					<tr>
-        						<td>5</td>
-        						<td>MantisBurns</td>
-        						<td>15.180.390</td>
-        						<td><span class="fa icon fa-user"></span>Offline</td>
-        					</tr>
-        				</tbody>
-        			</table>
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                            <h3 class="panel-title">Colocações</h3>
+                    </div>
+                    <table class="table table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Jogador</th>
+                                <th>Pontua&ccedil;&atilde;o</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>ShadowKnight</td>
+                                <td>120.980.050</td>
+                                <td><span class="fa icon fa-user color-green"></span>Online</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>WarriorMarge</td>
+                                <td>80.750.120</td>
+                                <td><span class="fa icon fa-user"></span>Offline</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>CycloidDolph</td>
+                                <td>72.900.550</td>
+                                <td><span class="fa icon fa-user"></span>Offline</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>TurkeySkinner</td>
+                                <td>69.815.210</td>
+                                <td><span class="fa icon fa-user color-green"></span>Online</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>MantisBurns</td>
+                                <td>15.180.390</td>
+                                <td><span class="fa icon fa-user"></span>Offline</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <ul class="pagination">
-                        <li class="disabled"><a href="#">«</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">»</a></li>
+                    <li class="disabled"><a href="#">«</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
                     </ul>
 
                 </div>
             </div>
         </div><!-- .row-->
-    </div><!-- .container-fluid -->
+    </div>
+
 
     <!-- dev tools -->
     <script src="bower_components/intuos.js/intuos.js"></script>
