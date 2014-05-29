@@ -1,6 +1,6 @@
 angular.module("istim").controller("ItemsSellController", ['$scope', '$http', '$routeParams', function(scope, http, routeParams){
 
-	scope.api_url = "http://localhost:1337/useritem/sell/";
+	scope.api_url = "http://istimitems-novo-istim-item.istimitems-novo.jit.su/useritem/sell/";
 	if (!scope.session.sessionUser)
 		scope.session.sessionUser = { id: '533ac1bda1659a5f58cda371' }
 
