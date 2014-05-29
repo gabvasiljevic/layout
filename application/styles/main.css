@@ -525,10 +525,9 @@ blockquote.game-review{
  margin-top: 0;
 }
 
-
-
-
-
-
-
-
+.popover-news .popover {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 15px;
+}

@@ -12,13 +12,15 @@
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
       <li><a href="games.html">Meus Jogos</a></li>
+      <li><a href="#/dashboard">Dashboard</a></li>
+      <li><a href="#/profile">Perfil</a></li>
 
       <li><a href="#/games">Comprar Jogos</a></li>
       <li><a href="#/news">Noticias</a></li>
       <li><a href="#/trade_item">Mercado de Item</a></li>
       <li><a href="#/about">Sobre</a></li>
-      <li><a href="add_friend.html">Adicionar Amigos</a></li>
-      <li><a href="index.html">Index</a></li>
+      <!-- <li><a href="add_friend.html">Adicionar Amigos</a></li> -->
+      <!-- <li><a href="index.html">Index</a></li> -->
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <!--<li class="dropdown">
@@ -36,7 +38,7 @@
         <!--  <li><a href="perfil.html">Perfil</a></li> -->
        <!-- </ul>
        </li> -->
-      <li><a href="index.html"><span class="fa icon fa-sign-out"></span>Sair</a></li>
+      <li><a href="#/" ng-click="logout()"><span class="fa icon fa-sign-out"></span>Sair {{ scope.session.user.name }}</a></li>
     </ul>
   </div>
 </div>

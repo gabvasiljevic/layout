@@ -1,14 +1,13 @@
-angular.module("istim").controller("ProfileController", ['$scope', '$http', '$location', function(scope, http, location){
+angular.module("istim").controller("ProfileController", ['$scope', '$http', '$location', '$cookies', function($scope, $http, $location, $cookies){
+	$scope.edit_profile = function (user) {
 
-	alert(scope.session.sessionUser);
-	console.log(scope.session.sessionUser);
-	scope.edit_profile = function (user) {
-		var data = {'name' : user.name, 'email' : user.email, 'password' : user.password};
-		http.post(scope.urlApiUser + 'auth/login', data)
+		var data = { 'id' : $scope.session.sessionUser.id, 'name' : user.name, 'email' : user.email, 'password' : user.password };
+		var config = { withCredentials: true, xsrfCookieName: $cookies, xsrfHeaderName: $cookies };
+
+		$http.put($scope.urlApiUser + 'user/', data, config)
 		.success(function(response) {
-			scope.session.sessionUser = response;
-			console.log(scope.sessionUser);
-			location.path('/dashboard');
+			$scope.session.sessionUser = response;
+			$location.path('/dashboard');
 		})
 		.error(function(response) {
 			console.log("ERROR::: " + response);

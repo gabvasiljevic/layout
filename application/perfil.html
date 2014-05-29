@@ -26,321 +26,250 @@
         }
     </script>
 </head>
-<body>
-    <div class="container-fluid">
-        <div class="row">
+<body ng-app="istim">
 
+  <div class="container-fluid">
+        <div class="row" ng-controller="UsersCtrl">
+            
             <!-- sidebar -->
             <div class="col-md-3">
-                <partial data-template="sidebar"></partial>
+                <!-- <partial data-template="sidebar"></partial> -->
+                <div class="list-group">
+                    <a class="list-group-item" href="#">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <img class="img-responsive-about" src="http://placehold.it/120x120"></img>
+                            </div>
+                            <div class="col-xs-7">
+                                <h4 class="list-group-item-heading">
+                                    {{ user.name }}
+                                </h4>
+                                <p class="list-group-item-text">
+                                              Moedas: 
+                                    <span class="color-yellow">
+                                        <i class="fa fa-bitcoin"></i>
+                                        {{ user.coin }}
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-
+        
             <!-- content -->
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-xs-6">
 
-                  <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <span class="panel-title">Player Items</span>
-                        <a href="sell_items.html" class="item-venda">Itens à Venda</a>
-                      </div>
-                      <table id="items-table" class="table">
-                        <tr>
-                          <td class="text-center item forsale fortrade">
-                            <div class="item-tip">
-                              <img src="images/items/1.png" data-selling="3" data-trading="4" data-name="Boomerang" data-description="Consequatur, optio, delectus? Maiores in eligendi error quidem expedita quod inventore. Repellendus." data-value="0.00" alt="">(10)
-
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <span class="panel-title">Player Items</span>
+                                <a href="sell_items.html" class="item-venda">Itens à Venda</a>
                             </div>
+                            
                             <table id="items-table" class="table">
-                                <tr>
-                                    <td class="text-center item forsale fortrade">
-                                        <div class="item-tip">
-                                            <img src="images/items/1.png" data-selling="3" data-trading="4" data-name="Boomerang" data-description="Consequatur, optio, delectus? Maiores in eligendi error quidem expedita quod inventore. Repellendus." data-value="0.00" alt="">(10)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item forsale fortrade">
-                                        <div class="item-tip">
-                                            <img src="images/items/2.png" data-selling="1" data-trading="1" data-name="Bottle" data-description="rem non eligendi ratione eum distinctio itaque ducimus veritatis beatae saepe laborum." data-value="0.00" alt="">(3)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item forsale">
-                                        <div class="item-tip">
-                                            <img src="images/items/3.png" data-selling="2" data-name="Red Cape" data-description="veniam. Hic, blanditiis labore dignissimos ex sint perspiciatis atque placeat in maxime." data-value="0.00" alt="">(2)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item forsale fortrade">
-                                        <div class="item-tip">
-                                            <img src="images/items/4.png" data-selling="4" data-trading="1" data-name="Hammer" data-description="quis quo eum itaque maxime cumque nisi culpa et tempore aut praesentium laborum?" data-value="0.00" alt="">(6)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/5.png" data-name="Mirror" data-description="eaque et soluta explicabo quidem iusto qui? Facilis dolore deserunt provident." data-value="0.00" alt="">(1)
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center item fortrade">
-                                        <div class="item-tip">
-                                            <img src="images/items/6.png" data-trading="2" data-name="Magic Powder" data-description="aliquam velit laboriosam reiciendis ea officiis sit nesciunt iste assumenda ab totam." data-value="0.00" alt="">(2)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/7.png" data-name="Scroll" data-description="ipsa rerum fugit reiciendis quasi placeat esse sequi laborum tempora culpa sed." data-value="0.00" alt="">(3)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/8.png" data-name="Master Sword" data-description="maiores reprehenderit sapiente quaerat sed aut nostrum sint perferendis aspernatur eligendi dolore." data-value="0.00" alt="">(100)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/9.png" data-name="Potion Bottle" data-description="nesciunt. Quisquam, a quam cupiditate nesciunt dolorum ea animi eius aliquid!" data-value="0.00" alt="">(12)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/10.png" data-name="Magic Bottle" data-description="qui sit officia necessitatibus libero praesentium magnam laborum omnis fugit eos eveniet quasi eius." data-value="0.00" alt="">(1)
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/11.png" data-name="Magic Potion Bottle" data-description="qui modi similique velit libero voluptatum accusantium voluptatem suscipit placeat fugit veritatis quidem blanditiis consequuntur. Nemo." data-value="0.00" alt="">(2)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/12.png" data-name="Magic Pearl" data-description="Amet, veniam earum accusantium hic ratione animi illum expedita quaerat fugit?" data-value="0.00" alt="">(3)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/13.png" data-name="Mushroom" data-description="deleniti tenetur temporibus amet nisi nam dolorem doloribus ipsa laudantium expedita odio officia. Obcaecati!" data-value="0.00" alt="">(5)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/14.png" data-name="Pegasus Shoes" data-description="pariatur deserunt aliquam reprehenderit laborum esse beatae magni ea quisquam at repudiandae!" data-value="0.00" alt="">(1)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/15.png" data-name="Brave Pendant" data-description="dolores repellendus doloremque molestias ea sunt quia rem quidem qui eius adipisci ducimus." data-value="0.00" alt="">(90)
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/16.png" data-name="Magic Pendant" data-description="facere delectus accusantium neque iste quos distinctio! Veritatis dolor alias quis iste aut facere?" data-value="0.00" alt="">(5)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/17.png" data-name="Life Pendant" data-description="dignissimos, veritatis eius voluptatem nobis doloremque ex distinctio voluptatibus ipsum eum quam." data-value="0.00" alt="">(4)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/18.png" data-name="Silver Glove" data-description="aut fugiat dignissimos amet vero minima illo quibusdam quas ea aspernatur iure reprehenderit." data-value="0.00" alt="">(1)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/19.png" data-name="Earthquake Medal" data-description="id voluptate doloremque temporibus aperiam ut harum modi repellat. Itaque, et." data-value="0.00" alt="">(3)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/20.png" data-name="Red Clothes" data-description="ipsum officiis quod nam iusto quis provident reiciendis atque. Ullam, autem?" data-value="0.00" alt="">(1)
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/21.png" data-name="Shield" data-description="eligendi et aperiam quaerat mollitia reiciendis perspiciatis odit sed eaque voluptatibus blanditiis magni." data-value="0.00" alt="">(7)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/22.png" data-name="Shovel" data-description="velit labore harum officia. Eligendi, iure et cumque numquam provident architecto!" data-value="0.00" alt="">(6)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/23.png" data-name="Key" data-description="ipsam vero facilis recusandae ipsum neque ratione aliquid dignissimos laboriosam quo iusto!" data-value="0.00" alt="">(1)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/24.png" data-name="Magic Sword" data-description="nemo quod aliquid minus placeat sunt laborum nihil ut porro enim saepe suscipit." data-value="0.00" alt="">(2)
-                                        </div>
-                                    </td>
-                                    <td class="text-center item">
-                                        <div class="item-tip">
-                                            <img src="images/items/25.png" data-name="Gold Glove" data-description="nam non quia facere nulla consequatur exercitationem dolorum corporis quasi voluptates." data-value="0.00" alt="">(4)
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table><!-- table.table -->
+                                        <tr>
+                                            <td class="text-center item forsale fortrade">
+                                                <div class="item-tip">
+                                                    <img src="images/items/1.png" data-selling="3" data-trading="4" data-name="Boomerang" data-description="Consequatur, optio, delectus? Maiores in eligendi error quidem expedita quod inventore. Repellendus." data-va-lue="0.00" alt="">(10)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item forsale fortrade">
+                                                <div class="item-tip">
+                                                    <img src="images/items/2.png" data-selling="1" data-trading="1" data-name="Bottle" data-description="rem non eligendi ratione eum distinctio itaque ducimus veritatis beatae saepe laborum." data-value="0.00" alt="">(3)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item forsale">
+                                                <div class="item-tip">
+                                                    <img src="images/items/3.png" data-selling="2" data-name="Red Cape" data-description="veniam. Hic, blanditiis labore dignissimos ex sint perspiciatis atque placeat in maxime." data-value="0.00" alt="">(2)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item forsale fortrade">
+                                                <div class="item-tip">
+                                                    <img src="images/items/4.png" data-selling="4" data-trading="1" data-name="Hammer" data-description="quis quo eum itaque maxime cumque nisi culpa et tempore aut praesentium laborum?" data-value="0.00" alt="">(6)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/5.png" data-name="Mirror" data-description="eaque et soluta explicabo quidem iusto qui? Facilis dolore deserunt provident." data-value="0.00" alt="">(1)
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center item fortrade">
+                                                <div class="item-tip">
+                                                    <img src="images/items/6.png" data-trading="2" data-name="Magic Powder" data-description="aliquam velit laboriosam reiciendis ea officiis sit nesciunt iste assumenda ab totam." data-value="0.00" alt="">(2)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/7.png" data-name="Scroll" data-description="ipsa rerum fugit reiciendis quasi placeat esse sequi laborum tempora culpa sed." data-value="0.00" alt="">(3)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/8.png" data-name="Master Sword" data-description="maiores reprehenderit sapiente quaerat sed aut nostrum sint perferendis aspernatur eligendi dolore." data-value="0.00" alt="">(100)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/9.png" data-name="Potion Bottle" data-description="nesciunt. Quisquam, a quam cupiditate nesciunt dolorum ea animi eius aliquid!" data-value="0.00" alt="">(12)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/10.png" data-name="Magic Bottle" data-description="qui sit officia necessitatibus libero praesentium magnam laborum omnis fugit eos eveniet quasi eius." data-value="0.00" alt="">(1)
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/11.png" data-name="Magic Potion Bottle" data-description="qui modi similique velit libero voluptatum accusantium voluptatem suscipit placeat fugit veritatis quidem blanditiis consequuntur. Nemo." data-value="0.00" alt="">(2)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/12.png" data-name="Magic Pearl" data-description="Amet, veniam earum accusantium hic ratione animi illum expedita quaerat fugit?" data-value="0.00" alt="">(3)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/13.png" data-name="Mushroom" data-description="deleniti tenetur temporibus amet nisi nam dolorem doloribus ipsa laudantium expedita odio officia. Obcaecati!" data-value="0.00" alt="">(5)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/14.png" data-name="Pegasus Shoes" data-description="pariatur deserunt aliquam reprehenderit laborum esse beatae magni ea quisquam at repudiandae!" data-value="0.00" alt="">(1)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/15.png" data-name="Brave Pendant" data-description="dolores repellendus doloremque molestias ea sunt quia rem quidem qui eius adipisci ducimus." data-value="0.00" alt="">(90)
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/16.png" data-name="Magic Pendant" data-description="facere delectus accusantium neque iste quos distinctio! Veritatis dolor alias quis iste aut facere?" data-value="0.00" alt="">(5)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/17.png" data-name="Life Pendant" data-description="dignissimos, veritatis eius voluptatem nobis doloremque ex distinctio voluptatibus ipsum eum quam." data-value="0.00" alt="">(4)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/18.png" data-name="Silver Glove" data-description="aut fugiat dignissimos amet vero minima illo quibusdam quas ea aspernatur iure reprehenderit." data-value="0.00" alt="">(1)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/19.png" data-name="Earthquake Medal" data-description="id voluptate doloremque temporibus aperiam ut harum modi repellat. Itaque, et." data-value="0.00" alt="">(3)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/20.png" data-name="Red Clothes" data-description="ipsum officiis quod nam iusto quis provident reiciendis atque. Ullam, autem?" data-value="0.00" alt="">(1)
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/21.png" data-name="Shield" data-description="eligendi et aperiam quaerat mollitia reiciendis perspiciatis odit sed eaque voluptatibus blanditiis magni." data-value="0.00" alt="">(7)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/22.png" data-name="Shovel" data-description="velit labore harum officia. Eligendi, iure et cumque numquam provident architecto!" data-value="0.00" alt="">(6)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/23.png" data-name="Key" data-description="ipsam vero facilis recusandae ipsum neque ratione aliquid dignissimos laboriosam quo iusto!" data-value="0.00" alt="">(1)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/24.png" data-name="Magic Sword" data-description="nemo quod aliquid minus placeat sunt laborum nihil ut porro enim saepe suscipit." data-value="0.00" alt="">(2)
+                                                </div>
+                                            </td>
+                                            <td class="text-center item">
+                                                <div class="item-tip">
+                                                    <img src="images/items/25.png" data-name="Gold Glove" data-description="nam non quia facere nulla consequatur exercitationem dolorum corporis quasi voluptates." data-value="0.00" alt="">(4)
+                                                </div>
+                                            </td>
+                                        </tr>
+                              </table><!-- table.table -->
                             <div class="panel-footer text-center">
                                 <a href="item_transactions.html">Histórico de Transações</a>
                             </div>
-                        </div>
-
-                    </div><!-- .col-xs-6 -->
-
+                        </div><!-- panel panel-default -->
+                        
+                    </div>
+                    
                     <div class="col-xs-6">
 
-
-                    <div id="myTabContent" class="panel-default">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Jogos Adquiridos</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="col-xs-12">
-                                <div class="row">
-                                    <div class="panel panel-default">
-                                        <div class="panel-body">
-                                            <div class="logo_game">
-                                               Flappy Bird
-                                               <a href="perfil_flappy_bird.html" alt="detalhes"><img  src="http://android-play.info/uploads/posts/2014-03/1393751760_flappy-bird-logo.jpg" alt="" class="img-responsive-about"> </a>
-
-                                           </div>
-                                           <div class="informacao">
-                                            <p>O mais difícil jogo de passarinhos já visto e mostre que é melhor do que todos os seus amigos
-                                            </p>
-                                            <span class="fa icon fa-trophy"></span><a href="perfil_flappy_bird.html" data-toggle="collapse" data-target="#achievements-list">Informações</a>
-                                        </div>
-                                        <!-- terminando informacao -->
+                        <div id="myTabContent" class="panel-default">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Jogos Adquiridos</h3>
+                                </div>
+                                
+                                <div class="panel-body">
+                                    <div class="col-xs-12">
+                                        <div class="row" ng-repeat="games in user.games">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <div class="col-xs-4">
+                                                        {{ games.name }} <br />
+                                                        <a href="{{ games.link }}" alt="detalhes">
+                                                            <img id="logo_game" src="{{ games.image }}" alt="" class="img-responsive-about" /> 
+                                                        </a>
+                                                    </div>
+                                                    <div class="informacao">
+                                                        <p>{{ games.description }}</p>
+                                                        <span class="fa icon fa-trophy"></span>
+                                                        <a href="{{ games.link }}" data-toggle="collapse" data-target="#achievements-list">Informações</a>
+                                                    </div><!-- terminando informacao -->
 
 
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div><!-- row -->
+                                        
                                     </div>
-
                                 </div>
                             </div>
-
-                            <!-- terminando informacao -->
-
-                        </div>
-
-                       
-
-			<div class="col-xs-12">
-				<div class="row">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="logo_game">
-								Legend of Zelda<br />
-								<a href="perfil_legend_of_zelda.html"><img src="http://userserve-ak.last.fm/serve/_/8619375/The+Legend+of+Zelda+Majoras+Mask+OST.jpg" alt="" class="img-responsive-about"></a>
-							</div>
-							<div class="informacao">
-								<p> É uma série de jogos eletrônicos da Nintendo criada em 1986 por Shigeru Miyamoto e Takashi Tezuka. Os jogos se passam no reino de Hyrule, num ambiente de fantasia. A jogabilidade mistura aventura e ação com elementos de RPG. A série é muito apreciada por suas tramas complexas, quebra-cabeças, jogabilidade e pela superprodução.
-								</p>
-								
-								<span class="fa icon fa-trophy"></span><a href="perfil_legend_of_zelda.html" data-toggle="collapse" data-target="#achievements-list">Informações</a>
-							</div>
-
-
-                                    </div>
-                                </div>
-                                              </div>
-				</div>
-
-				<div class="col-xs-12">
-					<div class="row">
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="logo_game">
-									Real Racing<br/>
-									<a href="perfil_real_racing.html"><img  src="http://1.bp.blogspot.com/-MvffPIa4ocU/UrHjVugLk0I/AAAAAAAABnU/URe6jSFGrbs/s1600/rr3-lamborguini.png" alt="" class="img-responsive-about"></a>
-								</div>
-								<div class="informacao">
-									<p>É um 2009 jogo de corrida desenvolvido e publicado pela Firemint para iOS . Foi lançado em 8 de junho de 2009, para iPhone e iPod Touch , e mais tarde um HD versão foi lançada para o iPad , que contou com gráficos melhorados para tirar o máximo proveito das capacidades do iPad.
-									</p>
-									
-									<span class="fa icon fa-trophy"></span><a href="perfil_real_racing.html" data-toggle="collapse" data-target="#achievements-list">Informações</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-12">
-					<div class="row">
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="logo_game">
-									Knights Of Pen and Paper<br />
-									<a href="perfil_knights.html">  <img src="http://4.bp.blogspot.com/-kN-NMyeY3EY/UiuDpZbDvOI/AAAAAAAAAT4/Dw29tye-zOw/s1600/KOPAP+Banner.jpg" alt="" class="img-responsive-about"> </a>
-								</div>
-								<div class="informacao">
-									<p>Estabelecidos em uma grande aventura neste baseado em turnos, estilo retro, RPG de pixel-art, inspirado nos grandes títulos da década de 90. Assumir o papel de jogadores no jogo assumindo os papéis de seus personagens em uma caneta e papel tradicional sessão de RPG na melhor experiência de RPG meta.
-									</p>
-									
-									<span class="fa icon fa-trophy"></span><a href="perfil_knights.html" data-toggle="collapse" data-target="#achievements-list">Informações</a>
-								</div>
-							</div>
-						</div>
-					</div><!-- .col-xs-3 -->
-				</div><!-- .row -->
-			</div><!--panel-body -->
-		</div>
-	</div>
-
-
-            <!-- modal -->
-            <div class="modal fade" id="modal-details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="myModalLabel"><img src="images/items/1.png" alt=""> Boomerang</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, deleniti, iure, facilis, id doloribus nesciunt voluptas quasi vel neque illum quam esse repellendus? Qui, similique officiis sequi beatae cum doloribus?</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, velit illum architecto optio ab quisquam hic perferendis saepe eius recusandae consequuntur magni omnis cumque amet molestias suscipit ex et laudantium.</p>
-                            <p><strong>Value:</strong> <span class="color-yellow"><i class="fa fa-bitcoin"></i> 0.00</span></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="buttonclickTrade()">Trade Item</button>
-                            <!--  <input type="button" class="btn btn-primary" value="ClickMe" onclick="buttonclick()" />  -->
-                            <button type="button" class="btn btn-primary" onclick="buttonclickSale()">Sell Item</button>
                         </div>
                     </div>
+                    
                 </div>
             </div>
 
-            <!-- dev tools -->
-            <script src="bower_components/intuos.js/intuos.js"></script>
+  <!-- dev tools -->
+  <script src="bower_components/intuos.js/intuos.js"></script>
 
-            <!-- scripts -->
-            <script src="bower_components/jquery/dist/jquery.min.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
-            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
-            <script src="scripts/start.js"></script>
-            <script src="scripts/main.js"></script>
-            <script src="scripts/chat.js"></script>
-        </body>
+  <!-- scripts -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+  <script src="bower_components/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
+  <script src="scripts/start.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
     </html>
