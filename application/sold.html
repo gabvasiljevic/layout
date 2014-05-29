@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Perfil</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/start.css">
+    <link rel="stylesheet" href="styles/chat.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+</head>
+<!-- to refactor -->
+<!--
+<script type="text/javascript">
+function buttonclickTrade(){
+window.location="./my_items_for_trade.html";
+}
+</script>
+<script type="text/javascript">
+function buttonclickSale(){
+window.location="./my_items_for_sale.html";
+}
+</script>
+-->
+<body ng-app="istim">
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- sidebar -->
+            <div class="col-md-3">
+                <partial data-template="sidebar"></partial>
+            </div>
+
+            <!-- content -->
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-xs-6">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Venda</h3>
+                            </div>
+                            <div class="panel-body">
+                            	<div ng-if="message.cash">
+                            		<p>Você vendeu o item com sucesso. Você possui agora {{message.cash}} istim coins.</p>
+                            	</div>
+                            	<div ng-if="message.error">
+                            		<p>{{message.type}} - {{message.message}}</p>
+                            	</div>
+                        		<p><a href="#/items">Voltar</a></p>
+                            </div><!-- div class='panel-body' -->
+                        </div>
+
+                    </div><!-- .col-xs-6 -->
+                </div><!-- .row -->
+            </div><!-- .col-xs-9 -->
+
+        </div><!-- .row-->
+    </div><!-- .container-fluid -->
+
+
+    <!-- modal -->
+    <div class="modal fade" id="modal-details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel"><img src="images/items/1.png" alt=""> Boomerang</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, deleniti, iure, facilis, id doloribus nesciunt voluptas quasi vel neque illum quam esse repellendus? Qui, similique officiis sequi beatae cum doloribus?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, velit illum architecto optio ab quisquam hic perferendis saepe eius recusandae consequuntur magni omnis cumque amet molestias suscipit ex et laudantium.</p>
+                    <p><strong>Value:</strong> <span class="color-yellow"><i class="fa fa-bitcoin"></i> 0.00</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="buttonclickTrade()">Trade Item</button>
+                    <!--  <input type="button" class="btn btn-primary" value="ClickMe" onclick="buttonclick()" />  -->
+                    <button type="button" class="btn btn-primary" onclick="buttonclickSale()">Sell Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- dev tools -->
+    <script src="bower_components/intuos.js/intuos.js"></script>
+
+    <!-- scripts -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="scripts/start.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/chat.js"></script>
+</body>
+</html>
