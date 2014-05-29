@@ -46,7 +46,6 @@ window.location="./my_items_for_sale.html";
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Player Items</h3>
-                                <a href="sell_items.html" class="item-venda">Itens à Venda</a>
                             </div>
                             <table id="items-table" class="table table-striped">
                                 <tr class="item" ng-repeat="item in items">
@@ -57,6 +56,9 @@ window.location="./my_items_for_sale.html";
                                 	</td>
                                 	<td>
                                 		{{item.name}}
+                                	</td>
+                                	<td class="text-right">
+                                		<a href="#/sell/{{item.id}}"><span class="badge badge-default">Vender</span></a>
                                 	</td>
                                 </tr>
                             </table><!-- table.table -->
