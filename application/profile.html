@@ -48,19 +48,32 @@ window.location="./my_items_for_sale.html";
                                 <h3 class="panel-title">Player Items</h3>
                             </div>
                             <table id="items-table" class="table table-striped">
-                                <tr class="item" ng-repeat="item in items">
-                                	<td class="text-center col-xs-2">
-                                		<div class="item-tip">
-                                        	<img src="images/items/{{item.id}}.png" data-name="{{item.name}}" data-description="nam non quia facere nulla consequatur exercitationem dolorum corporis quasi voluptates." data-value="{{item.price}}" alt="">
-                                		</div><!-- div class='item-tip' -->
-                                	</td>
-                                	<td>
-                                		{{item.name}}
-                                	</td>
-                                	<td class="text-right">
-                                		<a href="#/sell/{{item.id}}"><span class="badge badge-default">Vender</span></a>
-                                	</td>
-                                </tr>
+                            	<thead>
+                            		<tr>
+                            			<th></th>
+                            			<th>Nome</th>
+                            			<th>Preço</th>
+                            			<th></th>
+                            		</tr>
+                            	</thead>
+                            	<tbody>
+	                                <tr class="item" ng-repeat="item in items">
+	                                	<td class="text-center col-xs-2">
+	                                		<div class="item-tip">
+	                                        	<img src="images/items/{{item.id}}.png" data-name="{{item.name}}" data-description="nam non quia facere nulla consequatur exercitationem dolorum corporis quasi voluptates." data-value="{{item.price}}" alt="">
+	                                		</div><!-- div class='item-tip' -->
+	                                	</td>
+	                                	<td>
+	                                		{{item.name}}
+	                                	</td>
+	                                	<td>
+	                                		{{item.price}}
+	                                	</td>
+	                                	<td class="text-right">
+	                                		<a href="#/sell/{{item.id}}"><span class="badge badge-default">Vender</span></a>
+	                                	</td>
+	                                </tr>
+                            	</tbody>
                             </table><!-- table.table -->
                             <div class="panel-footer text-center">
                                 <a href="item_transactions.html">Histórico de Transações</a>
