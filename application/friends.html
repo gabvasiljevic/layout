@@ -15,19 +15,42 @@
     <link rel="stylesheet" href="styles/chat.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body ng-app="istim">
 
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-md-3" ng-controller="FriendsController">
                 <partial data-template="sidebar"></partial>
             </div>
 
 
 
-            <div class="col-xs-9">
-                <div class="panel panel-default">
+            <div class="col-xs-8" ng-controller="FriendsController">
+            	<div class="panel-heading">
+                        <h3 class="panel-title">Amigos</h3>
+                    </div>
+            	<div class="panel panel-default" ng-repeat="friend in friendlist">
+            	
+            		<div class="list-group">
+						<div class="row">
+						  <div class="col-xs-2">
+							<img class="img-responsive-about" src="http://placehold.it/100x100">
+						  </div>
+						  <div class="col-xs-3">
+							<h4 class="list-group-item-heading"><a href="#/perfil/{{friend.id}}">{{friend.name}}</a></h4>
+							<p class="list-group-item-text">
+							  Moedas: <span class="color-yellow"><i class="fa fa-bitcoin"></i> {{friend.coin}}</span>
+							</p>
+							<p class="list-group-item-text">
+							  Status: <i class="fa icon fa-user"></i> {{friend.status}}
+							</p>
+						  </div>
+						</div>
+					</div>
+            		
+            	</div>
+                <div class="panel panel-default" ng-controller="FriendsController">
                     <div class="panel-heading">
                         <h3 class="panel-title">Últimas Conquistas dos Amigos</h3>
                     </div>
@@ -36,7 +59,7 @@
                             <div class="col-xs-3">
                                 <div class="panel panel-default">
                                     <div class="panel-footer">
-                                        Mario da Burrinha em Flappy Bird
+                                        {{friend.name}} em Flappy Bird
                                     </div>
                                     <div class="panel-body">
                                         <p align="center"><img src="https://developers.google.com/games/services/images/branding/ic_play_games_badge_achievements_green.png" alt="" class="img-responsive"></p>
@@ -50,7 +73,7 @@
                             <div class="col-xs-3">
                                 <div class="panel panel-default">
                                     <div class="panel-footer">
-                                        Victor em Knights of Pen and Paper
+                                        {{friend.name}} em Knights of Pen and Paper
                                     </div>
                                     <div class="panel-body">
                                         <p align="center"><img src="http://im8.trueachievements.com/imagestore/0001304100/1304157.jpg" alt="" class="img-responsive"></p>
@@ -64,7 +87,7 @@
                             <div class="col-xs-3">
                                 <div class="panel panel-default">
                                     <div class="panel-footer">
-                                        Gabriel Vasiljevic em Real Racing
+                                        {{friend.name}} em Real Racing
                                     </div>
                                     <div class="panel-body">
                                         <p align="center"><img src="http://im5.trueachievements.com/imagestore/0000904400/904434.jpg" alt="" class="img-responsive"></p>
@@ -79,7 +102,7 @@
                             <div class="col-xs-3">
                                 <div class="panel panel-default">
                                     <div class="panel-footer">
-                                        Emerson Garrote em Zelda
+                                        {{friend.name}} em Zelda
                                     </div>
                                     <div class="panel-body">
                                         <p align="center"><img src="http://im5.trueachievements.com/imagestore/0001192600/1192614.jpg" alt="" class="img-responsive" align="center"></p>
@@ -95,7 +118,7 @@
                             <div class="col-xs-3">
                                 <div class="panel panel-default">
                                     <div class="panel-footer">
-                                        Gabriel Vasiljevic em League of Legends
+                                        {{friend.name}} em League of Legends
                                     </div>
                                     <div class="panel-body">
                                         <p align="center"><img src="images/challenger.png" alt="" class="img-responsive"></p>
@@ -108,7 +131,7 @@
                             <div class="col-xs-3">
                                 <div class="panel panel-default">
                                     <div class="panel-footer">
-                                        Isaac Newton em League of Legends
+                                        {{friend.name}} em League of Legends
                                     </div>
                                     <div class="panel-body">
                                         <p align="center"><img src="images/bronze.png" alt="" class="img-responsive"></p>
@@ -121,7 +144,7 @@
                             <div class="col-xs-3">
                                 <div class="panel panel-default">
                                     <div class="panel-footer">
-                                        Victor Henrique em League of Legends
+                                        {{friend.name}} em League of Legends
                                     </div>
                                     <div class="panel-body">
                                         <p align="center"><img src="images/silver.png" alt="" class="img-responsive"></p>

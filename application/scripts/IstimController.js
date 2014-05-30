@@ -103,6 +103,10 @@ istim.config( function ( $routeProvider ) { // configurando as rotas do módulo 
         //templateUrl: 'sign_in.html',
         controller: 'LogoutController'
     })
+  .when( '/friends', {
+        //templateUrl: 'friends.html',
+        controller: 'FriendsController'
+    })
   .when( '/signup', {
         templateUrl: 'sign_up.html',
         controller: 'SignupController'
